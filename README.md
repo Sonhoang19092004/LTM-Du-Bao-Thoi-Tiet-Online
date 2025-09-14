@@ -18,3 +18,44 @@
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
 </div>
+# Ứng dụng Dự báo Thời tiết Online qua UDP
+
+## 🌐 Giới thiệu
+Đây là đồ án môn học lập trình mạng với yêu cầu **xây dựng ứng dụng dự báo thời tiết trực tuyến sử dụng giao thức UDP**.  
+Ứng dụng cho phép **nhiều client cùng lúc** gửi yêu cầu tới server để lấy thông tin thời tiết từ API **OpenWeatherMap** và hiển thị trong giao diện **Java Swing**.
+
+## 🏗 Kiến trúc hệ thống
+- **Server (WeatherServerMulti.java)**  
+  - Nhận request từ nhiều client thông qua UDP.  
+  - Gọi OpenWeatherMap API để lấy dữ liệu thời tiết hiện tại và dự báo 5 ngày.  
+  - Tính toán trung bình nhiệt độ mỗi ngày từ dữ liệu forecast (3h/điểm).  
+  - Ghi lại lịch sử yêu cầu vào file `history.txt`.  
+
+- **Client (WeatherClientGUIFull.java)**  
+  - Gửi yêu cầu `CURRENT:city` hoặc `FORECAST:city` tới server.  
+  - Hiển thị dữ liệu thời tiết hiện tại (nhiệt độ, mô tả, icon).  
+  - Vẽ **biểu đồ nhiệt độ 5 ngày** từ dữ liệu dự báo.  
+  - Cho phép người dùng xem lại lịch sử yêu cầu.  
+
+- **HistoryManager.java**  
+  - Quản lý đọc/ghi file lịch sử (thread-safe).  
+
+## ⚙️ Chức năng chính
+- [x] Dự báo thời tiết hiện tại (nhiệt độ, mô tả, icon).  
+- [x] Biểu đồ dự báo trung bình nhiệt độ 5 ngày.  
+- [x] Lưu lịch sử truy vấn (ngày giờ, thành phố, loại yêu cầu).  
+- [x] Hỗ trợ nhiều client đồng thời.  
+- [x] Giao diện đồ họa (GUI) thân thiện bằng **Java Swing**.  
+
+## 🚀 Cách cài đặt & chạy
+
+### Yêu cầu
+- Java JDK 11+ (có hỗ trợ module `java.desktop`).  
+- Kết nối Internet để gọi OpenWeather API.  
+- API key hợp lệ từ [OpenWeatherMap](https://openweathermap.org/api).  
+
+### Các bước
+1. Clone hoặc tải source code về máy.  
+2. Đặt API key của bạn vào file **WeatherServerMulti.java**:
+   ```java
+   private static final String API_KEY = "YOUR_API_KEY";
