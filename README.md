@@ -87,8 +87,8 @@ Biểu đồ dự báo 5 ngày (vẽ trong GUI).
 
 Ví dụ:
 
-![Giao diện client](docs/Client)
-![Biểu đồ dự báo](images/chart.png)
+![Giao diện client]<img src="docs/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
+![Biểu đồ dự báo](docs/chart.png)
 
 💡 Ý tưởng phát triển thêm
 
