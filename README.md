@@ -87,7 +87,7 @@ Biểu đồ dự báo 5 ngày (vẽ trong GUI).
 
 Ví dụ:
 
-![Giao diện client](images/client.png)
+![Giao diện client](docs/Client)
 ![Biểu đồ dự báo](images/chart.png)
 
 💡 Ý tưởng phát triển thêm
