@@ -59,3 +59,45 @@
 2. Đặt API key của bạn vào file **WeatherServerMulti.java**:
    ```java
    private static final String API_KEY = "YOUR_API_KEY";
+3.Biên dịch:
+
+javac --add-modules java.desktop *.java
+
+
+4.Chạy server:
+
+java --add-modules java.desktop WeatherServerMulti
+
+
+5.Chạy client (mở nhiều cửa sổ client nếu muốn):
+
+java --add-modules java.desktop WeatherClientGUIFull
+
+📊 Minh họa giao diện
+
+Ô nhập thành phố + nút thao tác.
+
+TextArea hiển thị kết quả.
+
+Icon thời tiết (lấy từ OpenWeather).
+
+Biểu đồ dự báo 5 ngày (vẽ trong GUI).
+
+(Bạn có thể chụp màn hình khi chạy ứng dụng để chèn ảnh vào README.md)
+
+Ví dụ:
+
+![Giao diện client](images/client.png)
+![Biểu đồ dự báo](images/chart.png)
+
+💡 Ý tưởng phát triển thêm
+
+Thêm lựa chọn ngôn ngữ (đa ngữ: tiếng Việt, tiếng Anh).
+
+Hỗ trợ hiển thị nhiều loại thông tin hơn (độ ẩm, tốc độ gió, áp suất).
+
+Lưu lịch sử vào cơ sở dữ liệu thay vì file.
+
+Thêm chức năng cảnh báo thời tiết (mưa, bão).
+
+Phát triển ứng dụng mobile (Android/iOS) kết nối tới server UDP.
