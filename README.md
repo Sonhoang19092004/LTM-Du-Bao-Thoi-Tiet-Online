@@ -83,12 +83,11 @@ Icon thời tiết (lấy từ OpenWeather).
 
 Biểu đồ dự báo 5 ngày (vẽ trong GUI).
 
-(Bạn có thể chụp màn hình khi chạy ứng dụng để chèn ảnh vào README.md)
 
-Ví dụ:
+<img width="586" height="410" alt="image" src="https://github.com/user-attachments/assets/0cbab42c-452f-40f1-bd10-14773d4d8346" />
+<img width="685" height="391" alt="image" src="https://github.com/user-attachments/assets/e2e9b26c-7cef-445d-966f-b232577c8f20" />
 
-![Giao diện client]<img src="docs/Client.png"/>
-![Biểu đồ dự báo]<img src="docs/chart.png"/>
+
 
 💡 Ý tưởng phát triển thêm
 
